@@ -1,5 +1,7 @@
 # Run this cell to import the modules you require
 import mlflow.sklearn
+import mlflow.sklearn
+import mlflow.sklearn
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,9 +29,12 @@ def entry_point():
     important_features = ['min_temp', 'global_radiation', 'month', 'cloud_cover']
     X_train, X_test, y_train, y_test = split_data(cleaned_data, important_features)
     
-    mlflow.set_experiment("london_weather_experiment")
+
+    mlflow.set_tracking_uri("http://localhost:5000")
+    mlflow.set_experiment("london_weather_experiment", )
+    # mlflow.sklearn.autolog()
+
     with mlflow.start_run():
-        mlflow.log_param("model_type", "Linear Regression")
         mlflow.log_param("features", X_train.columns.tolist())
         mlflow.log_param("target", "mean_temp")
         trained_model = train_linear_regression_model(X_train, y_train)
@@ -146,7 +151,8 @@ def train_linear_regression_model(X_train, y_train):
     trained_mse = mean_squared_error(y_train, predictions)
     print("Validated MSE on training set:", trained_mse)
     mlflow.log_metric("trained_mse", trained_mse)
-    mlflow.sklearn.log_model(pipeline, "linear_regression_model")
+    mlflow.sklearn.log_model(pipeline, name="linear_regression_model")
+    # mlflow.sklearn.save_model(pipeline, "linear_regression_model_v1")
     print("Model training completed.")
     return pipeline
 
