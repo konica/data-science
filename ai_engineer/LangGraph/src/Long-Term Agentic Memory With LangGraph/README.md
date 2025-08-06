@@ -13,14 +13,14 @@ There are three types of memory
 - Episode (Experiences)
 - Procedural (Instructions)
 
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ## How to store memory
 - Two different ways: Along with hot path (current flow) or in the background
 
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 ## Picture about using memory in email agent
 
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
