@@ -5,6 +5,15 @@ Summarize the content from the course https://learn.deeplearning.ai/courses/long
 
 This course focuses on build Email assistant to support classify the email (important or ignore)
 
+Content
+
+    1. Baseline Email Assistant
+    2. Email Assistant with Semantic
+    3. Email Assistant with Semantic + Episodic
+    4. Email Assistant with Semantic + Episodic + Procedural
+
+
+
 
 
 ## What types of memory?
