@@ -13,13 +13,10 @@ Content
     4. Email Assistant with Semantic + Episodic + Procedural
 
 
-
-
-
 ## What types of memory?
 There are three types of memory
 - Semantic (Facts)
-- Episode (Experiences)
+- Episode (Experiences): Examples
 - Procedural (Instructions)
 
 ![alt text](img/image-3.png)
