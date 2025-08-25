@@ -62,7 +62,7 @@ def tavily_search_multiple(
         List of search result dictionaries
     """
 
-    # Execute searches sequentially. Note: yon can use AsyncTavilyClient to parallelize this step.
+    # Execute searches sequentially. Note: you can use AsyncTavilyClient to parallelize this step.
     search_docs = []
     for query in search_queries:
         result = tavily_client.search(

@@ -102,3 +102,7 @@ deep_researcher_builder.add_edge("write_research_brief", END)
 
 # Compile the workflow
 scope_research = deep_researcher_builder.compile()
+
+scope_research.invoke({
+
+})
