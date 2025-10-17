@@ -14,9 +14,6 @@ async def main():
             instructions="You are good at telling jokes."
         ) as agent,
     ):
-        agent.get_new_thread(service_thread_id="328392")
-
-        agent.threads.create(name="JokeThread")
         result = await agent.run("Tell me a joke about a pirate.")
         print(result.text)
 
