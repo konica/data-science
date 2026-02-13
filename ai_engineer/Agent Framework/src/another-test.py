@@ -1,17 +1,20 @@
 import os
 from openai import AzureOpenAI
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
 
 endpoint = os.getenv("AZURE_AI_PROJECT_ENDPOINT")
 model_name = "gpt-4o-mini"
 deployment = "gpt-4o-mini"
 
-subscription_key = os.getenv("AZURE_AI_SUBSCRIPTION_KEY")
+api_key = os.getenv("AZURE_AI_PROJECT_KEY")
 api_version = os.getenv("AZURE_AI_API_VERSION")
 
 client = AzureOpenAI(
     api_version=api_version,
     azure_endpoint=endpoint,
-    api_key=subscription_key,
+    api_key=api_key,
 )
 
 # response = client.chat.completions.create(
